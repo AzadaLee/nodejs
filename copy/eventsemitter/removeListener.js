@@ -9,7 +9,7 @@ emitter.removeListener('removeLis',function(){
 });
 	 
 emitter.emit('removeLis');
-
+	
 
 /*
 var EventEmitter = require ( 'events' ) . EventEmitter ;   
