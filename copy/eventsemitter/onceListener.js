@@ -1,7 +1,7 @@
 //引入事件模块
 var events = require('events');
 var emitter = new events.EventEmitter();
-emitter.on('onceListener',function(err,data){
+emitter.once('onceListener',function(err,data){
 	if(err){
 		return console.error(err.toString());
 	}
@@ -16,6 +16,12 @@ fs.writeFile('writeFileTest.txt',content,function(err){
 	}
 	emitter.emit('onceListener',err,'写入文件触发的事件！！！');
 });
+
+
 emitter.emit('onceListener','','测试onceListener！！！');
 
 console.log('end。。。。。。。');
+
+/*
+上文两个emitter.emit(...)只会触发一次
+*/
