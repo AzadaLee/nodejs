@@ -5,8 +5,8 @@ var net  = require('net');
 var client = net.connect({port:8080},function(data){
 	console.log('连接成功！');
 	console.log(data);
-	// client.write('helll world !');
-	client.write('world!\r\n');
+	client.write('helll world !');
+	// client.write('world!\r\n');
 });
 
 client.on('data',function(data){
