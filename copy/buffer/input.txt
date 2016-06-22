@@ -1,1 +1,3 @@
-这是nodejs自测buffer模块！
+在好奇心的驱使下可以探查到data事件调用了string_decoder来进行编码补足的行为。通过string_decoder对象输出第一个截取Buffer(事件循xx)时，只返回事件循这个字符串，保留xx。第二次通过string_decoder对象输出时检测到上次保留的xx，将上次剩余内容和本次的Buffer进行重新拼接输出。于是达到正常输出的目的。
+
+string_decoder，目前在文件流读取和网络流读取中都有应用到，一定程度上避免了粗鲁拼接trunk导致的乱码错误。但是，遗憾在于string_decoder目前只支持utf8编码。它的思路其实还可以扩展到其他编码上，只是最终是否会支持目前尚不可得知

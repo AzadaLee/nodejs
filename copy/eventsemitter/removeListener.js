@@ -11,14 +11,14 @@ emitter.removeListener('removeLis',function(){
 emitter.emit('removeLis');
 
 
-/*
+
 var EventEmitter = require ( 'events' ) . EventEmitter ;   
 
 var emitter = new EventEmitter ( ) ;
 
 emitter . on ( 'sayHi' , function ( someone ) {
 
-console . log ( someone +"。。。。。。。") ;
+	console . log ( someone +"。。。。。。。") ;
 
 } ) ;
 
@@ -29,4 +29,3 @@ console . log ( 'sayHi event' ) ;
 } ) ;
 
 emitter . emit ( 'jerry' ) ;
-*/
